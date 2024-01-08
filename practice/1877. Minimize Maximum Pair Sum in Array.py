@@ -7,4 +7,4 @@ def minPairSum(nums: List[int]) -> int:
     for i in range(len(nums)//2):
         l.append(a[i]+b[i])
     return max(l)
-print(minPairSum([3,5,4,2,4,6]))
+print(minPairSum([3,5,2,3]))

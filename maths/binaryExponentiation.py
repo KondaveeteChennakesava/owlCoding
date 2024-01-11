@@ -14,4 +14,4 @@ def inverse(a):
     return binaryExpo(a,mod-2)
 
 
-print(inverse(10))
+print(binaryExpo(2,8))

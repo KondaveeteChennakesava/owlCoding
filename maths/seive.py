@@ -6,6 +6,5 @@ def seive(n):
             for j in range(i*i,n,i):
                 primes[j] = i
     return primes
-# for prime factorization
 n = 25
-print(seive(n))
+factors = seive(n)

@@ -1,7 +1,9 @@
 N = (10**5)
 mod = (10**9)+7
+
 fact = [None] * N
 invFact = [None] * N
+
 def be(a,b):
     ans = 1
     while b:
@@ -9,7 +11,8 @@ def be(a,b):
             ans = ((ans%mod)*(a%mod))%mod
         a = ((a%mod)*(a%mod))%mod
         b = b >> 1
-    return ans  
+    return ans
+
 def preFact():
     fact[0] = 1
     invFact[0] = 1
@@ -17,6 +20,7 @@ def preFact():
         fact[i] = fact[i-1] * i
         fact[i] = fact[i] % mod
         invFact[i] = be(fact[i],mod-2)
+
 preFact()
 for _ in range(int(input())):
     n = int(input())

@@ -27,10 +27,10 @@ def preFact():
         fact[i] = fact[i-1] * i
         fact[i] %= mod
         invfact[i] = be(fact[i],mod-2)
+preFact()
 for _ in range(int(input())):
     n,r = map(int,input().split())
     # print(nCr(n,r))
-    preFact()
     # ans = fact[n] // (fact[r] * fact[n-r])
     ans = ((fact[n]%mod)*(invfact[r]%mod)*(invfact[n-r]%mod)) % mod
     print(ans)

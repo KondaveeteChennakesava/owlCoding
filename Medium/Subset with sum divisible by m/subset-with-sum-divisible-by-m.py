@@ -4,7 +4,7 @@ class Solution:
 	def DivisibleByM(self, nums, m):
 		# Code here
 		flag = 0
-		for i in range(1<<(len(nums))):
+		for i in range(1,1<<(len(nums))):
 		    s = 0
 		    for j in range(len(nums)):
 		        if (i>>j) & 1:

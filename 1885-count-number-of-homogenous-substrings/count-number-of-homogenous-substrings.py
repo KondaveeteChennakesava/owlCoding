@@ -1,16 +1,17 @@
 class Solution:
     def countHomogenous(self, s: str) -> int:
-        l = []
-        cnt = 0
+        ans,cnt = 0,0
+        if len(s) == 1:
+            ans += 1
         for i in range(len(s)-1):
-            # print(ans,cnt)
             if s[i] == s[i+1]:
                 cnt += 1
             else:
-                l.append(cnt+1)
+                cnt += 1
+                k = (cnt*(cnt+1))//2
+                ans += k
                 cnt = 0
-        l.append(cnt+1)
-        ss = 0
-        for i in l:
-            ss += (i*(i+1))//2
-        return ss%int(1e9+7)
+        if len(s)>=2 and s[-2] != s[-1] or cnt:
+            cnt += 1
+            ans += (cnt*(cnt+1))//2
+        return ans%int(1e9+7)

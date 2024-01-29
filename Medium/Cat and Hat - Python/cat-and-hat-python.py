@@ -8,11 +8,7 @@
 def cat_hat(str):
   ##your code here##
   ##You need to write complete code this time
-    c = str.count('cat')
-    s = str.count('hat')
-    if c == s:
-        return True
-    return False
+    return str.count('cat') == str.count('hat')
 
 #{ 
  # Driver Code Starts.

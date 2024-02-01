@@ -4,6 +4,6 @@ class Solution:
         n = len(nums)
         ans = [nums[i:i+3] for i in range(0,n,3)]
         for i in ans:
-            if (i[1] - i[0] > k) or (i[2] - i[1] > k) or (i[2] - i[0] > k):
+            if (i[2] - i[0] > k):
                 return []
         return ans

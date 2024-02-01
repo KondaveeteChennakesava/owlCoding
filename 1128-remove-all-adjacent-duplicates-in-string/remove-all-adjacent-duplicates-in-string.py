@@ -8,7 +8,4 @@ class Solution:
             else:
                 stack.pop()
             i += 1
-        ans = ''
-        for i in stack:
-            ans += i
-        return ans
+        return ''.join(stack)

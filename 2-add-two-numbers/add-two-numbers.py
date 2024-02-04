@@ -9,7 +9,7 @@ class Solution:
         curr = ans
         carry,x = 0,0
         while l1 and l2:
-            k = self.add(l1.val,l2.val) + x
+            k = l1.val + l2.val + x
             x = 0
             if k > 9:
                 x = k//10
@@ -47,7 +47,3 @@ class Solution:
             tt = ListNode(x)
             curr.next = tt
         return ans.next
-    def add(self,a,b):
-        if a == None:return b
-        if b == None:return a
-        return a+b

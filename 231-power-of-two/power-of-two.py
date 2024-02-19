@@ -1,6 +1,4 @@
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
-        b = bin(n)[2:]
-        if b[0] == '1' and b[1:] == '0'*(len(b)-1):
-            return 1
-        return 0
+        if n <= 0:return 0
+        return n&(n-1) == 0
